@@ -39,16 +39,37 @@ export default function page() {
   return (
     <div className="min-h-screen bg-[#0b0e14] text-slate-200 p-4 md:p-8 font-sans selection:bg-blue-500/30">
       {/* Header */}
-      <nav className="max-w-6xl mx-auto flex items-center justify-between mb-12">
-        <div className="flex items-center gap-2">
-          <div className="bg-blue-600 p-2 rounded-lg shadow-lg shadow-blue-600/20">
-            <Zap className="text-white fill-white" size={24} />
+      <nav className="max-w-6xl mx-auto flex items-center justify-between mb-12 px-4">
+        {/* Logo Section */}
+        <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="relative">
+            {/* Glow effect for AI feel */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg blur opacity-40 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="relative bg-slate-900 p-2 rounded-lg border border-blue-500/30">
+              <Zap className="text-blue-400 fill-blue-400/20 group-hover:fill-blue-400 transition-colors" size={24} />
+            </div>
           </div>
-          <h1 className="text-xl font-bold tracking-tight text-white">
-            ATS<span className="text-blue-500">INSIGHT</span>
-          </h1>
+
+          <div className="flex flex-col leading-none">
+            <h1 className="text-xl font-black tracking-tighter text-white">
+              GEN<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI</span>
+              <span className="ml-1 font-light text-slate-400">ATS</span>
+            </h1>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-blue-500/80 font-bold">Neural Checker</span>
+          </div>
         </div>
-        <div className="text-xs text-slate-500 font-mono hidden sm:block">POWERED BY LLAMA 3.1 & GROQ</div>
+
+        {/* Tech Stack Badge */}
+        <div className="hidden sm:flex items-center gap-3 bg-slate-800/40 px-4 py-2 rounded-full border border-slate-700/50 backdrop-blur-md">
+          <div className="flex items-center gap-2">
+            <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></div>
+            <span className="text-[10px] text-slate-400 font-mono tracking-wider">GEN-AI ACTIVE</span>
+          </div>
+          <div className="h-4 w-[1px] bg-slate-700"></div>
+          <div className="text-[10px] text-blue-400 font-mono font-bold italic">
+            LLAMA 3.1 + GROQ
+          </div>
+        </div>
       </nav>
 
       <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
