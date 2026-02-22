@@ -196,7 +196,7 @@ export default function page() {
                   {/* Improvements */}
                   <div className="space-y-4">
                     <h3 className="text-xs font-bold uppercase tracking-widest text-green-500 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span> Smart Fixes
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span> Smart Fixess
                     </h3>
                     <ul className="space-y-3">
                       {result.improvements?.map((imp, i) => (
