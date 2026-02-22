@@ -24,7 +24,7 @@ export default function page() {
     formData.append("jobDescription", jd);
 
     try {
-      const response = await axios.post("http://localhost:3000/api", formData);
+      const response = await axios.post("/api", formData);
       if (response.data.success) {
         setResult(response.data.analysis);
       }
